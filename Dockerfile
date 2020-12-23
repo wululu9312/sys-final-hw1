@@ -1,8 +1,5 @@
-#Version:0.1.2
-FROM python:3.6
-WORKDIR /app
-ADD requirements.txt /app/requirements.txt
-RUN pip install -r requirements.txt
-ADD app.py /app/app.py
-EXPOSE 80
-CMD ["python","app.py"]
+FROM python:3.4-alpine 
+ADD . /code 
+WORKDIR /code 
+RUN pip install -r requirements.txt 
+CMD ["python", "app.py"]
