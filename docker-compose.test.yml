@@ -6,10 +6,8 @@ sut:
 web:
         build: .
         dockerfile: Dockerfile
-        links: 
+        links:
           - redis
 redis:
         image: redis
- 
-
 

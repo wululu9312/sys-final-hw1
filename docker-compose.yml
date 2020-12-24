@@ -1,12 +1,10 @@
-version: '3'
+version: '2'
 services:
-  web:
-      build: .
-      links:
-        - redis
-      ports:
-        - "8000:80"
-      volumes:
-        - .:/code 
-  redis:
-      image: "redis" 
+  db:
+     image: mysql
+     environment:
+        MYSQL_ROOT_PASSWORD: 123456
+  admin:
+     image: adminer
+     ports:
+       - 8080:8080
