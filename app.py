@@ -22,4 +22,4 @@ def get_index():
     return 'Yo! 你是第 {} 次瀏覽\n'.format(count)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=80)
+    app.run(host="0.0.0.0", port=80,debug=True)
